@@ -18,7 +18,7 @@
                     "v": 4,
                     "tabs": [],
                     "primary": {
-                        "width": 300,
+                        "width": 0,
                         "top": {
                             "tabs": [
                                 "info",
@@ -34,7 +34,7 @@
                             "tabs": [
                                 "debug"
                             ],
-                            "hidden": false,
+                            "hidden": true,
                             "active": "debug"
                         }
                     },
@@ -59,9 +59,15 @@
             },
             "tours": {
                 "welcome": "5.0.7"
+            },
+            "dialog": {
+                "export": {
+                    "pretty": true,
+                    "json-view": true
+                }
             }
         },
-        "menu-menu-item-right-sidebar": true,
+        "menu-menu-item-right-sidebar": false,
         "menu-menu-item-left-sidebar": true
     }
 }

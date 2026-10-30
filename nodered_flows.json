@@ -1,0 +1,1655 @@
+[
+    {
+        "id": "746e438bb151500f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1a40247d654a6712",
+        "type": "mqtt-broker",
+        "name": "IP",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "dfb9a6f1a1ccc731",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "70011d851bdab113",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#1e293b",
+            "primary": "#38bdf8",
+            "bgPage": "#0f172a",
+            "groupBg": "#1e293b",
+            "groupOutline": "#334155"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "16px",
+            "groupGap": "16px",
+            "groupBorderRadius": "12px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "7f0850ace1152bee",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "dfb9a6f1a1ccc731",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "70011d851bdab113",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "338a290118d7092e",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "7f0850ace1152bee",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "57364db4ba11f81f",
+        "type": "ui-group",
+        "name": "Group 2",
+        "page": "7f0850ace1152bee",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "fd503ab695e9eed7",
+        "type": "telegram bot",
+        "botname": "@Xeb1Bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "ws_server_01",
+        "type": "websocket-listener",
+        "path": "/ws/sensors",
+        "wholemsg": "false"
+    },
+    {
+        "id": "6bd35ac3bddc0bfd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "iot_database",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "c07c659fc027bd22",
+        "type": "mqtt-broker",
+        "name": "pzem",
+        "broker": "",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "98403b856a4e7d6a",
+        "type": "tls-config",
+        "name": "",
+        "certType": "files",
+        "cert": "",
+        "key": "",
+        "p12": "",
+        "p12name": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": "",
+        "certEnv": "",
+        "keyEnv": "",
+        "caEnv": ""
+    },
+    {
+        "id": "c7c7ac6af60dbc9b",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "power_db",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "56f173cb94846bf2",
+        "type": "mqtt-broker",
+        "name": "pzem01",
+        "broker": "b1846ae35bad4e6f83b3e0bf47e1e724.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "98403b856a4e7d6a",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2f4a0455bb83f807",
+        "type": "mqtt in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "topic": "iot/sensor",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "1a40247d654a6712",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "c0558de9b3255841",
+                "1457a55b2ef1fcb4",
+                "90805ce04b77a3ce",
+                "ws_prep_func"
+            ]
+        ]
+    },
+    {
+        "id": "c0558de9b3255841",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "function 1",
+        "func": "let time = Date.now();\n\nreturn [\n    {\n        topic: \"Temperature\",\n        payload: msg.payload.temperature,\n        timestamp: time\n    },\n    {\n        topic: \"Humidity\",\n        payload: msg.payload.humidity,\n        timestamp: time\n    },\n    {\n        topic: \"Light\",\n        payload: msg.payload.light,\n        timestamp: time\n    }\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 420,
+        "wires": [
+            [
+                "379fa4d3ddf23aae",
+                "b676136a0f6f8db0"
+            ],
+            [
+                "8e4fbf445212ae4b",
+                "58fbc86f71519639"
+            ],
+            [
+                "9ff6b1d3eefa76f8",
+                "79dd7a4e0ebda562"
+            ]
+        ]
+    },
+    {
+        "id": "379fa4d3ddf23aae",
+        "type": "ui-gauge",
+        "z": "746e438bb151500f",
+        "name": "Temperature",
+        "group": "338a290118d7092e",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 490,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b676136a0f6f8db0",
+        "type": "ui-chart",
+        "z": "746e438bb151500f",
+        "group": "57364db4ba11f81f",
+        "name": "Temperature Chart",
+        "label": "Temperature Chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Temperature (°C)",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 510,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ff6b1d3eefa76f8",
+        "type": "ui-gauge",
+        "z": "746e438bb151500f",
+        "name": "Light",
+        "group": "338a290118d7092e",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "light",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "4095",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 490,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e4fbf445212ae4b",
+        "type": "ui-gauge",
+        "z": "746e438bb151500f",
+        "name": "Humidity",
+        "group": "338a290118d7092e",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "humidity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 500,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58fbc86f71519639",
+        "type": "ui-chart",
+        "z": "746e438bb151500f",
+        "group": "57364db4ba11f81f",
+        "name": "Humidity Chart",
+        "label": "chart",
+        "order": 2,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "%",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 540,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79dd7a4e0ebda562",
+        "type": "ui-chart",
+        "z": "746e438bb151500f",
+        "group": "57364db4ba11f81f",
+        "name": "Light chart",
+        "label": "chart",
+        "order": 3,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "lux",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "4095",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 530,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f79c6f4318e5037e",
+        "type": "telegram sender",
+        "z": "746e438bb151500f",
+        "name": "",
+        "bot": "fd503ab695e9eed7",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0af98798a2a62b31",
+        "type": "inject",
+        "z": "746e438bb151500f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"temperature\": 18.5,   \"light\": 450 }",
+        "payloadType": "json",
+        "x": 90,
+        "y": 480,
+        "wires": [
+            [
+                "1457a55b2ef1fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "1457a55b2ef1fcb4",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "notifications",
+        "func": "const now = Date.now();\nconst TIMEOUT = 30000; // ข้อมูลหายเกิน 30 วินาที ถือว่า Disconnect\n\nconst p = msg.payload || {};\nlet alerts = [];\n\n// ⚙️ เกณฑ์แจ้งเตือนระบบไฟฟ้า 3 เฟส\nconst VOLT_MIN = 198.0;       // ไฟตก (< 198V)\nconst VOLT_MAX = 242.0;       // ไฟเกิน (> 242V)\nconst CURRENT_MAX = 15.0;     // กระแสเกินต่อเฟส (> 15A)\nconst TOTAL_POWER_MAX = 5000; // กำลังไฟฟ้ารวมเกิน (> 5000W)\n\n// ใช้เวลาไทย (Asia/Bangkok)\nconst thaiHour = Number(\n    new Intl.DateTimeFormat(\"en-GB\", {\n        timeZone: \"Asia/Bangkok\",\n        hour: \"2-digit\",\n        hourCycle: \"h23\"\n    }).format(new Date(now))\n);\n\n// ช่วงเวลา 19:00 น. ถึง 06:00 น.\nconst isNightWindow = thaiHour >= 19 || thaiHour < 6;\n\n// สถานะเริ่มต้นของ Function Node\nlet startedAt = context.get(\"startedAt\");\nif (!startedAt) {\n    startedAt = now;\n    context.set(\"startedAt\", startedAt);\n}\n\n// เช็กว่ามีข้อมูล PZEM 3 เฟส เข้ามาหรือไม่\nconst hasPzemData =\n    typeof p.totalPower === \"number\" ||\n    typeof p.voltage === \"number\" ||\n    [p.l1, p.l2, p.l3].some(phase => phase && typeof phase.voltage === \"number\");\n\nconst devices = {\n    DHT11: typeof p.temperature === \"number\" || typeof p.temp === \"number\",\n    LDR: typeof p.light === \"number\" || typeof p.lux === \"number\" || typeof p.ldr === \"number\",\n    PZEM_3Phase: hasPzemData\n};\n\n// ==========================================\n// 1. WATCHDOG CHECK (เรียกจาก Inject Node ด้วย msg.topic = \"watchdog\")\n// ==========================================\nif (msg.topic === \"watchdog\") {\n    for (const device of Object.keys(devices)) {\n        const lastSeen = context.get(\"lastSeen_\" + device);\n        const previous = context.get(\"disconnected_\" + device);\n\n        const referenceTime = lastSeen || startedAt;\n        const disconnected = now - referenceTime > TIMEOUT;\n\n        const displayName = device === \"PZEM_3Phase\" ? \"PZEM-004T (3-Phase)\" : device;\n\n        if (disconnected && previous !== true) {\n            alerts.push(`🔴 ${displayName} Disconnect: ไม่พบข้อมูลเกิน 30 วินาที`);\n        }\n\n        if (!disconnected && previous === true) {\n            alerts.push(`🟢 ${displayName} กลับมาเชื่อมต่อแล้ว`);\n        }\n\n        context.set(\"disconnected_\" + device, disconnected);\n    }\n\n    if (alerts.length === 0) return null;\n\n    msg.payload = {\n        chatId: 8602127088,\n        type: \"message\",\n        content: \"🚨 แจ้งเตือน IoT Watchdog\\n\\n\" + alerts.join(\"\\n\")\n    };\n\n    return msg;\n}\n\n// ==========================================\n// 2. บันทึกเวลาที่ได้รับข้อมูล & อัปเดตการกลับมาเชื่อมต่อ\n// ==========================================\nfor (const device of Object.keys(devices)) {\n    if (devices[device]) {\n        context.set(\"lastSeen_\" + device, now);\n\n        const displayName = device === \"PZEM_3Phase\" ? \"PZEM-004T (3-Phase)\" : device;\n\n        if (context.get(\"disconnected_\" + device) === true) {\n            context.set(\"disconnected_\" + device, false);\n            alerts.push(`🟢 ${displayName} กลับมาเชื่อมต่อแล้ว`);\n        }\n    }\n}\n\n// ==========================================\n// 3. ตรวจสอบความผิดปกติระบบไฟฟ้า 3 เฟส (L1, L2, L3)\n// ==========================================\nif (hasPzemData) {\n    const phases = [\n        { name: \"L1\", data: p.l1 },\n        { name: \"L2\", data: p.l2 },\n        { name: \"L3\", data: p.l3 }\n    ];\n\n    phases.forEach(ph => {\n        if (!ph.data) return;\n        const v = Number(ph.data.voltage || 0);\n        const i = Number(ph.data.current || 0);\n        const keyPrefix = \"pzem_alert_\" + ph.name;\n\n        // ไฟตก\n        const isVoltLow = v > 0 && v < VOLT_MIN;\n        if (isVoltLow && context.get(keyPrefix + \"_vlow\") !== true) {\n            alerts.push(`⚠️ [${ph.name}] ไฟตก: ${v.toFixed(1)} V`);\n        }\n        context.set(keyPrefix + \"_vlow\", isVoltLow);\n\n        // ไฟเกิน\n        const isVoltHigh = v > VOLT_MAX;\n        if (isVoltHigh && context.get(keyPrefix + \"_vhigh\") !== true) {\n            alerts.push(`🚨 [${ph.name}] ไฟเกิน: ${v.toFixed(1)} V`);\n        }\n        context.set(keyPrefix + \"_vhigh\", isVoltHigh);\n\n        // กระแสเกิน\n        const isCurrentHigh = i > CURRENT_MAX;\n        if (isCurrentHigh && context.get(keyPrefix + \"_ihigh\") !== true) {\n            alerts.push(`🔥 [${ph.name}] กระแสเกิน: ${i.toFixed(2)} A`);\n        }\n        context.set(keyPrefix + \"_ihigh\", isCurrentHigh);\n        \n        // ตรวจสอบกระแสใช้งาน\n        const isCurrentLow = i > 0 && i < 2.00;\n        if (isCurrentLow && context.get(keyPrefix + \"_ilow\") !== true) {\n            alerts.push(`⚡ [${ph.name}] มีการใช้ไฟ: ${i.toFixed(2)} A`);\n        }\n        context.set(keyPrefix + \"_ilow\", isCurrentLow);\n    });\n\n    // ตรวจสอบไฟขาดเฟส (Phase Loss)\n    const activeVolts = phases.map(ph => ph.data ? Number(ph.data.voltage || 0) : 0);\n    if (activeVolts.some(v => v > 100)) {\n        phases.forEach(ph => {\n            const v = ph.data ? Number(ph.data.voltage || 0) : 0;\n            const key = \"pzem_alert_\" + ph.name + \"_loss\";\n            const isLoss = v < 50;\n\n            if (isLoss && context.get(key) !== true) {\n                alerts.push(`❌ [${ph.name}] ไฟขาดเฟส! (0 V)`);\n            }\n            context.set(key, isLoss);\n        });\n    }\n\n    // ตรวจสอบกำลังไฟฟ้ารวมเกิน (Total Power Overload)\n    const totalPower = Number(p.totalPower || 0);\n    const isPowerOverload = totalPower > TOTAL_POWER_MAX;\n    if (isPowerOverload && context.get(\"pzem_alert_power_overload\") !== true) {\n        alerts.push(`💥 โหลดไฟฟ้ารวมเกินกำหนด: ${totalPower.toFixed(1)} W`);\n    }\n    context.set(\"pzem_alert_power_overload\", isPowerOverload);\n}\n\n// ==========================================\n// 4. ตรวจสอบอุณหภูมิและแสง\n// ==========================================\nconst temp = p.temperature ?? p.temp;\nconst light = p.light ?? p.lux ?? p.ldr;\n\n// ตรวจสอบอุณหภูมิ\nif (typeof temp === \"number\") {\n    // 4.1 ตรวจสอบอุณหภูมิสูงเกินเกณฑ์ (ทำงานตลอด 24 ชม.)\n    if (temp >= 30 && context.get(\"tempAlert\") !== true) {\n        alerts.push(`🌡️ อุณหภูมิสูงเกินเกณฑ์: ${temp} °C`);\n        context.set(\"tempAlert\", true);\n    } else if (temp < 27 && context.get(\"tempAlert\") === true) {\n        alerts.push(`🟢 อุณหภูมิกลับสู่สภาวะปกติ: ${temp} °C`);\n        context.set(\"tempAlert\", false);\n    }\n\n    // 4.2 ตรวจสอบการลืมปิดแอร์ (เฉพาะช่วง 19:00 - 06:00 น. และอุณหภูมิ < 25 °C)\n    if (isNightWindow) {\n        if (temp < 25 && context.get(\"acAlert\") !== true) {\n            alerts.push(`❄️ ลืมปิดแอร์! มีคนเปิดแอร์ทิ้งไว้ (อุณหภูมิ: ${temp} °C)`);\n            context.set(\"acAlert\", true);\n        } else if (temp >= 25 && context.get(\"acAlert\") === true) {\n            alerts.push(`🟢 อุณหภูมิห้องกลับสู่ระดับปกติ/ปิดแอร์แล้ว: ${temp} °C`);\n            context.set(\"acAlert\", false);\n        }\n    } else {\n        context.set(\"acAlert\", false);\n    }\n}\n\n// ตรวจสอบแสง (เฉพาะช่วง 19:00 น. ถึง 06:00 น.)\nif (isNightWindow && typeof light === \"number\") {\n    if (light > 300 && context.get(\"lightAlert\") !== true) {\n        alerts.push(`💡 เปิดไฟทิ้งไว้ (ความสว่าง: ${light} lx)`);\n        context.set(\"lightAlert\", true);\n    } else if (light <= 300) {\n        context.set(\"lightAlert\", false);\n    }\n} else if (!isNightWindow) {\n    context.set(\"lightAlert\", false);\n}\n\n// ==========================================\n// 5. จัดรูปแบบเพื่อส่ง Telegram (ถ้าไม่มีแจ้งเตือนจะส่ง null)\n// ==========================================\nif (alerts.length === 0) return null;\n\nmsg.payload = {\n    chatId: 8602127088,\n    type: \"message\",\n    content: \"🚨 แจ้งเตือนระบบ IoT\\n\\n\" + alerts.join(\"\\n\")\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "f79c6f4318e5037e"
+            ]
+        ]
+    },
+    {
+        "id": "70a3bf4c891df0f2",
+        "type": "telegram receiver",
+        "z": "746e438bb151500f",
+        "name": "",
+        "bot": "fd503ab695e9eed7",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "handleprocessupdates": false,
+        "x": 850,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "efcf6c070fad4b73",
+        "type": "ui-template",
+        "z": "746e438bb151500f",
+        "group": "",
+        "page": "7f0850ace1152bee",
+        "ui": "dfb9a6f1a1ccc731",
+        "name": "Page 1 Style",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<style>\n/* ===== Page 1 - Clean Dark Theme ===== */\n\n/* Page background */\n.nrdb-page {\n    background: #0f172a !important;\n    font-family: 'Inter', 'Segoe UI', sans-serif !important;\n}\n\n/* Group card */\n.nrdb-ui-group {\n    background: #1e293b !important;\n    border: 1px solid #334155 !important;\n    border-radius: 14px !important;\n    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;\n    overflow: hidden !important;\n    transition: box-shadow 0.3s ease;\n}\n\n.nrdb-ui-group:hover {\n    box-shadow: 0 6px 28px rgba(56, 189, 248, 0.12) !important;\n}\n\n/* Group title bar */\n.nrdb-ui-group .v-card-title,\n.nrdb-ui-group .nrdb-ui-group-name {\n    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;\n    color: #e2e8f0 !important;\n    font-size: 15px !important;\n    font-weight: 600 !important;\n    letter-spacing: 0.5px !important;\n    padding: 12px 16px !important;\n    border-bottom: 1px solid #334155 !important;\n}\n\n/* Widget/card area */\n.nrdb-ui-widget-content {\n    background: #1e293b !important;\n    color: #cbd5e1 !important;\n}\n\n/* Gauge styles */\n.nrdb-ui-gauge svg text {\n    fill: #e2e8f0 !important;\n    font-family: 'Inter', sans-serif !important;\n}\n\n.nrdb-ui-gauge svg .gauge-value {\n    fill: #38bdf8 !important;\n    font-weight: 700 !important;\n    font-size: 1.4em !important;\n}\n\n/* Chart background */\n.nrdb-ui-chart canvas {\n    border-radius: 8px;\n}\n\n/* Text/label color override */\n.nrdb-ui-text {\n    color: #94a3b8 !important;\n}\n\n/* Scrollbar */\n::-webkit-scrollbar {\n    width: 6px;\n}\n::-webkit-scrollbar-track {\n    background: #0f172a;\n}\n::-webkit-scrollbar-thumb {\n    background: #334155;\n    border-radius: 3px;\n}\n::-webkit-scrollbar-thumb:hover {\n    background: #38bdf8;\n}\n</style>\n\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "page",
+        "className": "",
+        "x": 690,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ws_in_01",
+        "type": "websocket in",
+        "z": "746e438bb151500f",
+        "name": "WS Receive Control",
+        "server": "ws_server_01",
+        "client": "",
+        "x": 1100,
+        "y": 240,
+        "wires": [
+            [
+                "ws_debug_01"
+            ]
+        ]
+    },
+    {
+        "id": "ws_debug_01",
+        "type": "debug",
+        "z": "746e438bb151500f",
+        "name": "Web Control In",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "http_web_in",
+        "type": "http in",
+        "z": "746e438bb151500f",
+        "name": "GET /web",
+        "url": "/web",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 780,
+        "wires": [
+            [
+                "func_web_route"
+            ]
+        ]
+    },
+    {
+        "id": "file_web_read",
+        "type": "file in",
+        "z": "746e438bb151500f",
+        "name": "Read dashboard.html",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 540,
+        "y": 800,
+        "wires": [
+            [
+                "http_web_resp"
+            ]
+        ]
+    },
+    {
+        "id": "http_web_resp",
+        "type": "http response",
+        "z": "746e438bb151500f",
+        "name": "HTTP Response",
+        "statusCode": "200",
+        "headers": {},
+        "x": 770,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "90805ce04b77a3ce",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "format for database",
+        "func": "let d = msg.payload;\n\n// แปลง JSON String เป็น Object หากโหนด MQTT In ยังส่งมาเป็นข้อความ\nif (typeof d === 'string') {\n    try {\n        d = JSON.parse(d);\n    } catch (e) {\n        node.error(\"Invalid JSON format\", msg);\n        return null;\n    }\n}\n\nmsg.topic = `\nINSERT INTO sensor_data\n(\n    temperature,\n    humidity,\n    light\n)\nVALUES (?, ?, ?)\n`;\n\nmsg.payload = [\n    d.temperature !== undefined ? d.temperature : 0,\n    d.humidity !== undefined ? d.humidity : 0,\n    d.light !== undefined ? d.light : 0\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 120,
+        "wires": [
+            [
+                "bdcd80202c297f5c"
+            ]
+        ]
+    },
+    {
+        "id": "bdcd80202c297f5c",
+        "type": "mysql",
+        "z": "746e438bb151500f",
+        "mydb": "6bd35ac3bddc0bfd",
+        "name": "",
+        "x": 850,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "http_web_file_in",
+        "type": "http in",
+        "z": "746e438bb151500f",
+        "name": "GET /web/:file",
+        "url": "/web/:file",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 830,
+        "wires": [
+            [
+                "func_web_route"
+            ]
+        ]
+    },
+    {
+        "id": "func_web_route",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "Route Web File",
+        "func": "const allowed = {\n    'dashboard.html': 'dashboard.html',\n    'analytics.html': 'analytics.html',\n    'energy.html': 'energy.html',\n    'history.html': 'history.html',\n    'settings.html': 'settings.html',\n    'style.css': 'style.css',\n    'common.js': 'common.js'\n};\n\nlet requested = (msg.req.params && msg.req.params.file) ? msg.req.params.file : '';\n\n// Redirect /web or /web/ to /web/dashboard.html for clean relative paths\nif (!requested || requested === '') {\n    msg.statusCode = 302;\n    msg.headers = { 'Location': '/web/dashboard.html' };\n    msg.payload = 'Redirecting...';\n    return [null, msg];\n}\n\nlet target = allowed[requested] || 'dashboard.html';\nmsg.filename = 'c:/Users/ASUS TUF/.node-red/' + target;\n\nif (target.endsWith('.css')) {\n    msg.headers = { 'content-type': 'text/css; charset=utf-8' };\n} else if (target.endsWith('.js')) {\n    msg.headers = { 'content-type': 'application/javascript; charset=utf-8' };\n} else {\n    msg.headers = { 'content-type': 'text/html; charset=utf-8' };\n}\n\nreturn [msg, null];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 800,
+        "wires": [
+            [
+                "file_web_read"
+            ],
+            [
+                "http_web_resp"
+            ]
+        ]
+    },
+    {
+        "id": "467357fae7d8220c",
+        "type": "mqtt in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "topic": "ku/engineering/power3phase/data/3/amp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56f173cb94846bf2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1600,
+        "y": 420,
+        "wires": [
+            [
+                "c377364895c086a1"
+            ]
+        ]
+    },
+    {
+        "id": "ced39b9f1cdecfc6",
+        "type": "mqtt in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "topic": "ku/engineering/power3phase/data/3/volt",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56f173cb94846bf2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1560,
+        "y": 500,
+        "wires": [
+            [
+                "daf3bfac10176ff6"
+            ]
+        ]
+    },
+    {
+        "id": "6e9d3ffc3bd63feb",
+        "type": "mqtt in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "topic": "ku/engineering/power3phase/data/3/watt",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56f173cb94846bf2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1640,
+        "y": 600,
+        "wires": [
+            [
+                "09283dd1d9f844c4"
+            ]
+        ]
+    },
+    {
+        "id": "f9f14da06b232d81",
+        "type": "mqtt in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "topic": "ku/engineering/power3phase/data/3/energy_wh",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56f173cb94846bf2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1640,
+        "y": 720,
+        "wires": [
+            [
+                "e239fdbca286a433"
+            ]
+        ]
+    },
+    {
+        "id": "daf3bfac10176ff6",
+        "type": "ui-gauge",
+        "z": "746e438bb151500f",
+        "name": "",
+        "group": "338a290118d7092e",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge3",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "300",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2020,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09283dd1d9f844c4",
+        "type": "ui-gauge",
+        "z": "746e438bb151500f",
+        "name": "",
+        "group": "338a290118d7092e",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge3",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "2000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2020,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e239fdbca286a433",
+        "type": "ui-gauge",
+        "z": "746e438bb151500f",
+        "name": "",
+        "group": "338a290118d7092e",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge3",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "10000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2060,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c377364895c086a1",
+        "type": "ui-gauge",
+        "z": "746e438bb151500f",
+        "name": "",
+        "group": "338a290118d7092e",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge3",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2020,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6237c152082f5b61",
+        "type": "mqtt in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "topic": "ku/engineering/power3phase/data/+/+",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56f173cb94846bf2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1130,
+        "y": 120,
+        "wires": [
+            [
+                "58eb1fde93acfb25",
+                "1457a55b2ef1fcb4",
+                "f5db39a9b7c0a377"
+            ]
+        ]
+    },
+    {
+        "id": "58eb1fde93acfb25",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "format for database",
+        "func": "// ดึง topic เช่น ku/engineering/power3phase/data/1/volt\nvar parts = msg.topic.split('/');\nif (parts.length < 6) return null;\n\nvar phaseId = parts[4];   // \"1\", \"2\", หรือ \"3\"\nvar metric  = parts[5];   // \"volt\", \"amp\", \"watt\", \"energy_wh\"\nvar val     = parseFloat(msg.payload);\n\nif (isNaN(val)) return null;\n\n// ฟังก์ชันดึงเวลาปัจจุบันของ Node-RED Server (YYYY-MM-DD HH:mm:ss)\nfunction getServerTime() {\n    var now = new Date();\n    var pad = function(n) { return String(n).padStart(2, '0'); };\n    return now.getFullYear() + '-' +\n           pad(now.getMonth() + 1) + '-' +\n           pad(now.getDate()) + ' ' +\n           pad(now.getHours()) + ':' +\n           pad(now.getMinutes()) + ':' +\n           pad(now.getSeconds());\n}\n\n// ใช้งาน memory ของ flow เพื่อเก็บค่าและสถานะการรับข้อมูลต่อเฟส\nvar storeKey = \"phase_\" + phaseId;\nvar data = flow.get(storeKey) || {\n    phase: parseInt(phaseId),\n    volt: null,\n    amp: null,\n    watt: null,\n    energy_wh: null,\n    updated: { volt: false, amp: false, watt: false, energy_wh: false }\n};\n\n// 🟢 เพิ่มสแกนป้องกัน Error: สร้างวัตถุ updated ทันทีถ้าข้อมูลใน Memory ยังเป็นโครงสร้างรุ่นเก่า\nif (!data.updated) {\n    data.updated = { volt: false, amp: false, watt: false, energy_wh: false };\n}\n\n// อัปเดตค่าและปัก Flag ว่าได้รับค่านั้นแล้ว\nif (metric === \"volt\")      { data.volt = val;      data.updated.volt = true; }\nif (metric === \"amp\")       { data.amp = val;       data.updated.amp = true; }\nif (metric === \"watt\")      { data.watt = val;      data.updated.watt = true; }\nif (metric === \"energy_wh\") { data.energy_wh = val; data.updated.energy_wh = true; }\n\nflow.set(storeKey, data);\n\n// ตรวจสอบว่าเฟสนี้ได้รับค่าครบทั้ง 4 พารามิเตอร์ของรอบปัจจุบันแล้วหรือยัง\nif (data.updated.volt && data.updated.amp && data.updated.watt && data.updated.energy_wh) {\n    var currentTimestamp = getServerTime();\n\n    /* เก็บค่าล่าสุดของแต่ละเฟสไว้ให้หน้าเว็บ / API อ่าน */\n    flow.set(\"pzem_latest_phase_\" + phaseId, {\n        phase: data.phase,\n        timestamp: currentTimestamp,\n        volt: data.volt,\n        amp: data.amp,\n        watt: data.watt,\n        energy_wh: data.energy_wh\n    });\n\n    // ประกอบคำสั่ง SQL INSERT\n    var sql = \"INSERT INTO pzem_3phase_logs (device_time, phase_id, voltage, current, power, energy) VALUES ('\"\n              + currentTimestamp + \"', \" \n              + data.phase + \", \" \n              + data.volt + \", \" \n              + data.amp + \", \" \n              + data.watt + \", \" \n              + data.energy_wh + \");\";\n\n    // รีเซ็ต Flag การรับค่าของเฟสนี้ เพื่อเตรียมพร้อมรับข้อมูลในรอบถัดไป\n    data.updated = { volt: false, amp: false, watt: false, energy_wh: false };\n    flow.set(storeKey, data);\n    \n    return { \n        topic: sql, \n        payload: sql \n    };\n}\n\nreturn null; // รอข้อความถัดไป",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 80,
+        "wires": [
+            [
+                "6f175eeca5d5d76b"
+            ]
+        ]
+    },
+    {
+        "id": "6f175eeca5d5d76b",
+        "type": "mysql",
+        "z": "746e438bb151500f",
+        "mydb": "c7c7ac6af60dbc9b",
+        "name": "",
+        "x": 1800,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ws_prep_func",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "Format for Web",
+        "func": "let p = msg.payload;\nif (typeof p === 'string') {\n    try { p = JSON.parse(p); } catch(e) {}\n}\nif (!p || typeof p !== 'object') {\n    p = {};\n}\n\nlet out = {\n    // Environmental\n    temperature: p.temperature !== undefined ? p.temperature : p.temp,\n    humidity: p.humidity !== undefined ? p.humidity : p.humi,\n    light: p.light !== undefined ? p.light : p.ldr,\n\n\n    topic: msg.topic || p.topic,\n    timestamp: Date.now()\n};\n\nmsg.payload = JSON.stringify(out);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 40,
+        "wires": [
+            [
+                "ws_out_01"
+            ]
+        ]
+    },
+    {
+        "id": "ws_out_01",
+        "type": "websocket out",
+        "z": "746e438bb151500f",
+        "name": "WS Send Sensors",
+        "server": "ws_server_01",
+        "client": "",
+        "x": 870,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1ebce5a89a02da64",
+        "type": "http in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "url": "/api/energy-history",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 960,
+        "wires": [
+            [
+                "e5115651e4eb1353"
+            ]
+        ]
+    },
+    {
+        "id": "e5115651e4eb1353",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "function 5",
+        "func": "msg.topic = `\nSELECT\n    id,\n    device_time,\n    phase_id,\n    voltage,\n    current,\n    power,\n    energy,\n    recorded_at\nFROM pzem_3phase_logs\nORDER BY recorded_at DESC\nLIMIT 10000\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 960,
+        "wires": [
+            [
+                "6108d3a78f3cdea0"
+            ]
+        ]
+    },
+    {
+        "id": "6108d3a78f3cdea0",
+        "type": "mysql",
+        "z": "746e438bb151500f",
+        "mydb": "c7c7ac6af60dbc9b",
+        "name": "",
+        "x": 540,
+        "y": 960,
+        "wires": [
+            [
+                "097be71bd2bc33ac"
+            ]
+        ]
+    },
+    {
+        "id": "097be71bd2bc33ac",
+        "type": "http response",
+        "z": "746e438bb151500f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "0f9e5e0391a2d2b2",
+        "type": "http in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "url": "/api/pzem-data",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 1060,
+        "wires": [
+            [
+                "77418dbd40aa7cd6"
+            ]
+        ]
+    },
+    {
+        "id": "4fa3768e4d0a54d4",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "function 6",
+        "func": "const rows = msg.payload;\n\nif (!Array.isArray(rows) || rows.length === 0) {\n    msg.payload = {\n        success: false,\n        message: \"ไม่พบข้อมูล PZEM ใน Database\"\n    };\n    msg.statusCode = 404;\n    return msg;\n}\n\n// ฟังก์ชันช่วยค้นหาแถวล่าสุดตาม phase_id (1, 2, 3)\nconst getPhaseData = (phaseId) => {\n    const row = rows.find(r => Number(r.phase_id) === phaseId);\n    \n    if (!row) {\n        return {\n            voltage: 0,\n            current: 0,\n            power: 0,\n            energyWh: 0,\n            energyKwh: 0,\n            timestamp: null\n        };\n    }\n\n    return {\n        voltage: Number(row.voltage || 0),\n        current: Number(row.current || 0),\n        power: Number(row.power || 0),\n        energyWh: Number(row.energy || 0),\n        energyKwh: Number(row.energy || 0) / 1000,\n        timestamp: row.recorded_at || row.device_time\n    };\n};\n\n// ดึงข้อมูลแยกตาม phase_id\nconst l1 = getPhaseData(1);\nconst l2 = getPhaseData(2);\nconst l3 = getPhaseData(3);\n\nconst totalPower = l1.power + l2.power + l3.power;\nconst totalEnergy = l1.energyKwh + l2.energyKwh + l3.energyKwh;\n\n// ดึง timestamp ล่าสุดที่มีอยู่\nconst latestTimestamp = [l1, l2, l3].map(p => p.timestamp).find(Boolean) || new Date().toLocaleString('th-TH');\n\nmsg.payload = {\n    success: true,\n    phases: { l1, l2, l3 },\n    l1,\n    l2,\n    l3,\n    totalPower,\n    totalEnergy,\n    timestamp: latestTimestamp\n};\n\nmsg.headers = {\n    \"Content-Type\": \"application/json; charset=utf-8\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1060,
+        "wires": [
+            [
+                "d6433a9ef4a3a2da"
+            ]
+        ]
+    },
+    {
+        "id": "77418dbd40aa7cd6",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "function 7",
+        "func": "// กำหนดคำสั่ง SQL เพื่อดึงข้อมูล 15 แถวล่าสุดมาจัดกลุ่ม 3 เฟส\nmsg.topic = \"SELECT * FROM pzem_3phase_logs ORDER BY id DESC LIMIT 15;\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1060,
+        "wires": [
+            [
+                "02022a8884718de4"
+            ]
+        ]
+    },
+    {
+        "id": "02022a8884718de4",
+        "type": "mysql",
+        "z": "746e438bb151500f",
+        "mydb": "c7c7ac6af60dbc9b",
+        "name": "",
+        "x": 540,
+        "y": 1060,
+        "wires": [
+            [
+                "4fa3768e4d0a54d4"
+            ]
+        ]
+    },
+    {
+        "id": "d6433a9ef4a3a2da",
+        "type": "http response",
+        "z": "746e438bb151500f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "5104b74a7629385b",
+        "type": "inject",
+        "z": "746e438bb151500f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"success\": true,   \"totalPower\": 6500,   \"l1\": { \"voltage\": 180.5, \"current\": 18.5 },   \"l2\": { \"voltage\": 235.0, \"current\": 2.1 },   \"l3\": { \"voltage\": 0.0, \"current\": 0.0 } }",
+        "payloadType": "json",
+        "x": 90,
+        "y": 380,
+        "wires": [
+            [
+                "1457a55b2ef1fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "f274ba08c05e75f2",
+        "type": "http in",
+        "z": "746e438bb151500f",
+        "name": "",
+        "url": "/api/sensor-data",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 1140,
+        "wires": [
+            [
+                "1727f3c483a84441"
+            ]
+        ]
+    },
+    {
+        "id": "1727f3c483a84441",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "function 8",
+        "func": "// กำหนดคำสั่ง SQL เพื่อดึงข้อมูล 15 แถวล่าสุดมาจัดกลุ่ม 3 เฟส\nmsg.topic = \"SELECT * FROM sensor_data ORDER BY id DESC LIMIT 1000;\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1140,
+        "wires": [
+            [
+                "8d86892e77f4b56f"
+            ]
+        ]
+    },
+    {
+        "id": "46f1bae46105172f",
+        "type": "http response",
+        "z": "746e438bb151500f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1050,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "8d86892e77f4b56f",
+        "type": "mysql",
+        "z": "746e438bb151500f",
+        "mydb": "6bd35ac3bddc0bfd",
+        "name": "",
+        "x": 630,
+        "y": 1140,
+        "wires": [
+            [
+                "6b9964707bb09fa4"
+            ]
+        ]
+    },
+    {
+        "id": "6b9964707bb09fa4",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "function 9",
+        "func": "msg.headers = {\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Allow-Methods\": \"GET, POST, OPTIONS\",\n    \"Access-Control-Allow-Headers\": \"Content-Type\"\n};\n\nif (Array.isArray(msg.payload)) {\n    msg.payload = msg.payload.map(row => ({\n        id: row.id,\n        temp: row.temp ?? row.temperature ?? null,\n        humi: row.humi ?? row.humidity ?? null,\n        light: row.light ?? row.lux ?? row.ldr ?? null,\n        recorded_at: row.recorded_at || row.created_at || new Date().toISOString()\n    }));\n} else {\n    msg.payload = [];\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 1140,
+        "wires": [
+            [
+                "46f1bae46105172f"
+            ]
+        ]
+    },
+    {
+        "id": "6e9d58e8fee3dc40",
+        "type": "inject",
+        "z": "746e438bb151500f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"l1\": { \"voltage\": 220, \"current\": 16.50 } }",
+        "payloadType": "json",
+        "x": 70,
+        "y": 280,
+        "wires": [
+            [
+                "1457a55b2ef1fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "f5db39a9b7c0a377",
+        "type": "function",
+        "z": "746e438bb151500f",
+        "name": "Format for Web",
+        "func": "// ดึงเวลาปัจจุบันในรูปแบบ YYYY-MM-DD HH:mm:ss\nconst now = new Date().toISOString().slice(0, 19).replace('T', ' ');\nconst data = msg.payload;\n\n// กรณีที่ 1: รับข้อมูลพร้อมกัน 3 เฟส { l1: {...}, l2: {...}, l3: {...} }\nif (data.l1 || data.l2 || data.l3) {\n    let inserts = [];\n    [1, 2, 3].forEach(phaseId => {\n        const p = data[`l${phaseId}`];\n        if (p) {\n            const volt = p.v ?? p.voltage ?? 0;\n            const curr = p.i ?? p.current ?? 0;\n            const watt = p.p ?? p.power ?? 0;\n            const kwh = p.e ?? p.energy ?? 0;\n            \n            inserts.push(`('${now}', '${now}', ${phaseId}, ${volt}, ${curr}, ${watt}, ${kwh})`);\n        }\n    });\n\n    if (inserts.length > 0) {\n        msg.topic = `INSERT INTO pzem_telemetry (device_time, recorded_at, phase_id, voltage, current, power, energy) VALUES ${inserts.join(', ')}`;\n    }\n} \n// กรณีที่ 2: รับข้อมูลมาทีละเฟสแบบเดี่ยว { phase_id: 1, voltage: 230, ... }\nelse {\n    const phaseId = data.phase_id || data.phase || 1;\n    const volt = data.voltage ?? data.v ?? 0;\n    const curr = data.current ?? data.i ?? 0;\n    const watt = data.power ?? data.p ?? 0;\n    const kwh = data.energy ?? data.e ?? 0;\n\n    msg.topic = `INSERT INTO pzem_telemetry (device_time, recorded_at, phase_id, voltage, current, power, energy) VALUES ('${now}', '${now}', ${phaseId}, ${volt}, ${curr}, ${watt}, ${kwh})`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 160,
+        "wires": [
+            [
+                "165258d8a4275e75"
+            ]
+        ]
+    },
+    {
+        "id": "165258d8a4275e75",
+        "type": "websocket out",
+        "z": "746e438bb151500f",
+        "name": "WS Send Sensors",
+        "server": "ws_server_01",
+        "client": "",
+        "x": 1770,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "279e98d388955004",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.33.0",
+            "node-red-contrib-telegrambot": "19.0.3",
+            "node-red-node-mysql": "3.0.4"
+        }
+    }
+]

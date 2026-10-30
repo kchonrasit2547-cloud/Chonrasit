@@ -58,7 +58,7 @@
       </li>
 
       <li class="nav-item" id="nav-energyhistory">
-        <a href="http://localhost:1880/energy_history.html">
+        <a href="http://localhost:1882/energy_history.html">
           <span>ประวัติข้อมูลพลังงานไฟฟ้า</span>
         </a>
       </li>
@@ -66,15 +66,15 @@
 
     <ul class="nav-list" style="flex: 0; padding-bottom: 12px;">
       <li class="nav-item">
-        <a href="http://localhost:1880/dashboard/page1" target="_blank" rel="noopener noreferrer">
+        <a href="http://localhost:1882/dashboard/page1" target="_blank" rel="noopener noreferrer">
           <span>Dashboard 2.0</span>
           <span class="nav-badge badge-green">External</span>
         </a>
       </li>
       <li class="nav-item">
-        <a href="http://localhost:1880/" target="_blank" rel="noopener noreferrer">
+        <a href="http://localhost:1882/" target="_blank" rel="noopener noreferrer">
           <span>Flow Editor</span>
-          <span class="nav-badge badge-yellow">:1880</span>
+          <span class="nav-badge badge-yellow">:1882</span>
         </a>
       </li>
     </ul>
@@ -405,45 +405,45 @@
       }
     });
 
-    // Populate initial logs & charts on load
-    document.addEventListener('DOMContentLoaded', () => {
-      const initialLogs = typeof getStoredLogs === 'function' ? getStoredLogs() : [];
+    function applyLogsToDashboard(logs) {
+      if (!logs || logs.length === 0) return;
 
       // 1. Render recent logs table snippet
-      renderRecentLogs(initialLogs);
+      renderRecentLogs(logs);
 
       // 2. Populate Stat Cards with latest log entry if available
-      if (initialLogs.length > 0) {
-        const latest = initialLogs[0];
+      const latest = logs[0];
 
-        if (latest.temp && latest.temp !== '--') {
-          const tempVal = parseFloat(latest.temp);
-          const elVal = document.getElementById('valTemp');
-          if (elVal) elVal.textContent = tempVal.toFixed(1);
-        }
+      if (latest.temp !== undefined && latest.temp !== null && latest.temp !== '--') {
+        const tempVal = parseFloat(latest.temp);
+        const elVal = document.getElementById('valTemp');
+        if (elVal && !isNaN(tempVal)) elVal.textContent = tempVal.toFixed(1);
+      }
 
-        if (latest.humi && latest.humi !== '--') {
-          const humiVal = parseFloat(latest.humi);
-          const elVal = document.getElementById('valHumi');
-          if (elVal) elVal.textContent = humiVal.toFixed(1);
-        }
+      if (latest.humi !== undefined && latest.humi !== null && latest.humi !== '--') {
+        const humiVal = parseFloat(latest.humi);
+        const elVal = document.getElementById('valHumi');
+        if (elVal && !isNaN(humiVal)) elVal.textContent = humiVal.toFixed(1);
+      }
 
-        if (latest.light && latest.light !== '--') {
-          const lightVal = parseFloat(latest.light);
-          const elVal = document.getElementById('valLight');
-          if (elVal) elVal.textContent = Math.round(lightVal);
-        }
+      if (latest.light !== undefined && latest.light !== null && latest.light !== '--') {
+        const lightVal = parseFloat(latest.light);
+        const elVal = document.getElementById('valLight');
+        if (elVal && !isNaN(lightVal)) elVal.textContent = Math.round(lightVal);
       }
 
       // 3. Seed historical data into temperature, humidity, and light charts
-      const chartLogs = initialLogs.slice(0, maxPoints).reverse();
+      chartLabels.length = 0;
+      tempDataPoints.length = 0;
+      humiDataPoints.length = 0;
+      lightDataPoints.length = 0;
+
+      const chartLogs = logs.slice(0, maxPoints).reverse();
       chartLogs.forEach(item => {
-        if (item.temp && item.temp !== '--') {
-          chartLabels.push(item.time);
-          tempDataPoints.push(parseFloat(item.temp));
-          humiDataPoints.push(parseFloat(item.humi));
-          lightDataPoints.push(parseFloat(item.light) || 0);
-        }
+        chartLabels.push(item.time || '');
+        tempDataPoints.push(parseFloat(item.temp) || 0);
+        humiDataPoints.push(parseFloat(item.humi) || 0);
+        lightDataPoints.push(parseFloat(item.light) || 0);
       });
 
       if (chartLabels.length > 0) {
@@ -451,6 +451,20 @@
         dashHumiChart.update();
         dashLightChart.update();
       }
+    }
+
+    // เมื่อโหลดข้อมูลจาก Database ผ่าน API สำเร็จ ให้อัปเดต UI ทันที
+    window.addEventListener('iot-database-loaded', (e) => {
+      const logs = e.detail && e.detail.sensorLogs;
+      if (logs && logs.length > 0) {
+        applyLogsToDashboard(logs);
+      }
+    });
+
+    // Populate initial logs & charts on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const initialLogs = typeof getStoredLogs === 'function' ? getStoredLogs() : [];
+      applyLogsToDashboard(initialLogs);
 
       // 4. Cached PZEM Power (Safe check)
       const cachedPzem = typeof getStoredPzemData === 'function' ? getStoredPzemData() : null;

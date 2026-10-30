@@ -15,7 +15,7 @@ let isWebTempAlertShown = false;
 // Get or initialize WebSocket URL
 function getWsUrl() {
   const host = window.location.hostname || 'localhost';
-  return localStorage.getItem('nodered_ws_url') || `ws://${host}:1880/ws/sensors`;
+  return localStorage.getItem('nodered_ws_url') || `ws://${host}:1882/ws/sensors`;
 }
 
 // Thresholds
@@ -345,7 +345,7 @@ async function fetchSensorLogs() {
 // ดึงข้อมูลไฟฟ้า 3 เฟส (power_db -> pzem_3phase_logs)
 async function fetchPowerLogs() {
   try {
-    const response = await fetch("http://localhost:1880/api/energy-history");
+    const response = await fetch("http://localhost:1882/api/energy-history");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
 
@@ -375,7 +375,10 @@ async function fetchPowerLogs() {
 async function loadDataFromNodeRed() {
   try {
     const [sensorData, powerData] = await Promise.all([fetchSensorLogs(), fetchPowerLogs()]);
-    if (sensorData.length > 0) saveStoredLogs(sensorData);
+    if (sensorData.length > 0) {
+      allTelemetryLogs = sensorData;
+      saveStoredLogs(sensorData);
+    }
     if (powerData.length > 0) {
       const latest = powerData[0];
       if (latest.volt !== null) pzemData.voltage = latest.volt;
@@ -385,6 +388,11 @@ async function loadDataFromNodeRed() {
       localStorage.setItem('pzem_cached_data', JSON.stringify(pzemData));
     }
     updateBadgeCounts();
+
+    // แจ้งเตือนหน้าเว็บต่างๆ เพื่อเรนเดอร์ข้อมูลล่าสุดจาก Database ทันที
+    window.dispatchEvent(new CustomEvent('iot-database-loaded', {
+      detail: { sensorLogs: sensorData, powerLogs: powerData }
+    }));
   } catch (e) {
     console.warn('Failed to load initial data:', e);
   }
